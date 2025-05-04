@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -29,7 +29,7 @@ function Copyright() {
 
 export default function Footer() {
   return (
-    <React.Fragment>
+    <>
       <Divider />
       <Container
         sx={{
@@ -59,11 +59,7 @@ export default function Footer() {
           >
             <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
               <SitemarkIcon />
-              <Typography
-                variant="body2"
-                gutterBottom
-                sx={{ fontWeight: 600, mt: 2 }}
-              >
+              <Typography variant="body2" gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
                 Join the newsletter
               </Typography>
               <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
@@ -79,13 +75,11 @@ export default function Footer() {
                   fullWidth
                   aria-label="Enter your email address"
                   placeholder="Your email address"
-                  slotProps={{
-                    htmlInput: {
-                      autoComplete: 'off',
-                      'aria-label': 'Enter your email address',
-                    },
-                  }}
                   sx={{ width: '250px' }}
+                  inputProps={{
+                    autoComplete: 'off',
+                    'aria-label': 'Enter your email address',
+                  }}
                 />
                 <Button
                   variant="contained"
@@ -98,6 +92,7 @@ export default function Footer() {
               </Stack>
             </Box>
           </Box>
+
           <Box
             sx={{
               display: { xs: 'none', sm: 'flex' },
@@ -108,22 +103,13 @@ export default function Footer() {
             <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
               Product
             </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              Features
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Testimonials
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Highlights
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Pricing
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              FAQs
-            </Link>
+            <Link color="text.secondary" variant="body2" href="#">Features</Link>
+            <Link color="text.secondary" variant="body2" href="#">Testimonials</Link>
+            <Link color="text.secondary" variant="body2" href="#">Highlights</Link>
+            <Link color="text.secondary" variant="body2" href="#">Pricing</Link>
+            <Link color="text.secondary" variant="body2" href="#">FAQs</Link>
           </Box>
+
           <Box
             sx={{
               display: { xs: 'none', sm: 'flex' },
@@ -134,16 +120,11 @@ export default function Footer() {
             <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
               Company
             </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              About us
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Careers
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Press
-            </Link>
+            <Link color="text.secondary" variant="body2" href="#">About us</Link>
+            <Link color="text.secondary" variant="body2" href="#">Careers</Link>
+            <Link color="text.secondary" variant="body2" href="#">Press</Link>
           </Box>
+
           <Box
             sx={{
               display: { xs: 'none', sm: 'flex' },
@@ -154,17 +135,12 @@ export default function Footer() {
             <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
               Legal
             </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              Terms
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Privacy
-            </Link>
-            <Link color="text.secondary" variant="body2" href="#">
-              Contact
-            </Link>
+            <Link color="text.secondary" variant="body2" href="#">Terms</Link>
+            <Link color="text.secondary" variant="body2" href="#">Privacy</Link>
+            <Link color="text.secondary" variant="body2" href="#">Contact</Link>
           </Box>
         </Box>
+
         <Box
           sx={{
             display: 'flex',
@@ -176,17 +152,14 @@ export default function Footer() {
           }}
         >
           <div>
-            <Link color="text.secondary" variant="body2" href="#">
-              Privacy Policy
-            </Link>
+            <Link color="text.secondary" variant="body2" href="#">Privacy Policy</Link>
             <Typography sx={{ display: 'inline', mx: 0.5, opacity: 0.5 }}>
               &nbsp;•&nbsp;
             </Typography>
-            <Link color="text.secondary" variant="body2" href="#">
-              Terms of Service
-            </Link>
+            <Link color="text.secondary" variant="body2" href="#">Terms of Service</Link>
             <Copyright />
           </div>
+
           <Stack
             direction="row"
             spacing={1}
@@ -223,6 +196,6 @@ export default function Footer() {
           </Stack>
         </Box>
       </Container>
-    </React.Fragment>
+    </>
   );
 }
